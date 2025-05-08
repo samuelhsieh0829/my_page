@@ -1,0 +1,20 @@
+body {
+    background-color: black;
+}
+.container {
+    width: 800px;
+    height: 400px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    /* Permalink - use to edit and share this gradient. 固定鏈接 - 用於編輯和分享此漸變： https://colorzilla.com/gradient-editor/#2b1e9a+0,2d2ad8+50,2620ca+51,7e7ee8+100 */
+    background: linear-gradient(to bottom,  #2b1e9a 0%,#2d2ad8 50%,#8e8ee8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Cascadia Mono';
+}
+h1, h2, h3 {
+    color: white;
+}
