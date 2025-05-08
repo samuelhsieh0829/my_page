@@ -1,20 +1,33 @@
 body {
-    background-color: black;
+    background-color: #111156;
 }
 .container {
-    width: 800px;
-    height: 400px;
+    width: 700px;
+    height: 500px;
     flex-shrink: 0;
     border-radius: 10px;
-    /* Permalink - use to edit and share this gradient. 固定鏈接 - 用於編輯和分享此漸變： https://colorzilla.com/gradient-editor/#2b1e9a+0,2d2ad8+50,2620ca+51,7e7ee8+100 */
-    background: linear-gradient(to bottom,  #2b1e9a 0%,#2d2ad8 50%,#8e8ee8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#102e50+0,1c669e+100 */
+    background: linear-gradient(135deg,  #5195e4 0%,#11293b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    box-shadow: 5px  5px 5px black;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Cascadia Mono';
+    font-family: Consolas, 'Courier New', monospace;
+}
+.child {
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    top: 5%;
+    left: 8%;
 }
 h1, h2, h3 {
     color: white;
+}
+.object {
+    position: relative;
+    align-items: center;
+    display: inline-block;
+    text-align: center;
 }
