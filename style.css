@@ -10,6 +10,7 @@ body {
     background: linear-gradient(135deg,  #5195e4 0%,#11293b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     box-shadow: 5px  5px 5px black;
     position: absolute;
+    opacity: 0.75;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
