@@ -1,5 +1,6 @@
 body {
-    background-color: #111156;
+    background: url("https://avatars.githubusercontent.com/u/66865408?v=4") no-repeat center center fixed;
+    background-size: cover;
 }
 .container {
     width: 700px;
@@ -10,7 +11,7 @@ body {
     background: linear-gradient(135deg,  #5195e4 0%,#11293b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     box-shadow: 5px  5px 5px black;
     position: absolute;
-    opacity: 0.75;
+    opacity: 0.85;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
