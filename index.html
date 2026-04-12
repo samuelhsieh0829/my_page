@@ -19,7 +19,7 @@
     <div class="container">
         <div class="child">
             <div class="section">
-                <p>👀About Me👀</p>
+                <p id="secret">👀About Me👀</p>
                 <div class="objects-container">
                     <div id="about_me" class="object">
                         <img src="https://avatars.githubusercontent.com/u/66865408?v=4" width="72px" height="72px" style="border-radius: 50%;"></iframe>
@@ -83,6 +83,42 @@
             </div>
             
             <div class="section">
+                <p>🕹️My achievements🕹️</p>
+                <div class="objects-container">
+                    <div id="self_study_1" class="object">
+                        <a href="https://github.com/samuelhsieh0829/Arduino_Gun">
+                            <img src="assets/icons/AdsClickFilled.svg" width="36px" height="24px"></iframe>
+                        </a>
+                        <p>高一自主學習</p>
+                    </div>
+                    <div id="self_study_2" class="object">
+                        <a href="https://github.com/samuelhsieh0829/Arduino_Bow">
+                            <img src="assets/icons/AdsClickFilled.svg" width="36px" height="24px"></iframe>
+                        </a>
+                        <p>高二自主學習</p>
+                    </div>
+                    <div id="ganzin" class="object">
+                        <a href="https://www.instagram.com/reel/DM03Vx9IMb4">
+                            <img src="assets/icons/EyeTracking20Filled.svg" width="36px" height="24px"></iframe>
+                        </a>
+                        <p>Ganzin X Taichi設計競賽</p>
+                    </div>
+                    <div id="ickii" class="object">
+                        <a href="https://github.com/samuelhsieh0829/Arduino_Gun">
+                            <img src="assets/icons/AdsClickFilled.svg" width="36px" height="24px"></iframe>
+                        </a>
+                        <p>ICKII論文發表</p>
+                    </div>
+                    <div id="university" class="object">
+                        <a href="https://www.instagram.com/p/DVOmOkgASxX">
+                            <img src="assets/icons/University.svg" width="36px" height="24px"></iframe>
+                        </a>
+                        <p>115特殊選材</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
                 <p>📁My "Art" works📁</p>
                 <div class="objects-container">
                     <div id="portfolio" class="object">
@@ -115,6 +151,12 @@
                         </a>
                         <p>Samuelhsieh Bot</p>
                     </div>
+                    <div id="samuelhsieh-agent" class="object">
+                        <a href="https://github.com/samuelhsieh0829/samuelhsieh_agent">
+                            <img src="assets/icons/AssistantFilled.svg" width="36px" height="36px"></iframe>
+                        </a>
+                        <p>Samuelhsieh Agent</p>
+                    </div>
                     <div id="mc-query-bot" class="object">
                         <a href="https://github.com/samuelhsieh0829/minecraft-query">
                             <img src="assets/icons/BroadcastTower.svg" width="36px" height="36px"></iframe>
@@ -125,7 +167,44 @@
             </div>
 
             <div class="section">
+                <p>🕹️Hardware🕹️</p>
+                <div class="objects-container">
+                    <div id="arduino-gun" class="object">
+                        <a href="https://github.com/samuelhsieh0829/Arduino_Gun">
+                            <img src="assets/icons/AdsClickFilled.svg" width="36px" height="24px"></iframe>
+                        </a>
+                        <p>Arduino Gun</p>
+                    </div>
+                    <div id="arduino-bow" class="object">
+                        <a href="https://github.com/samuelhsieh0829/Arduino_Bow">
+                            <img src="assets/icons/AdsClickFilled.svg" width="36px" height="24px"></iframe>
+                        </a>
+                        <p>Arduino Bow</p>
+                    </div>
+                    <div id="cheap-mai" class="object">
+                        <a href="https://github.com/samuelhsieh0829/Cheap-Mai">
+                            <img src="assets/icons/IosRadioButtonOn.svg" width="36px" height="24px"></iframe>
+                        </a>
+                        <p>Cheap Mai</p>
+                    </div>
+                    <div id="3.5mm-audio-to-USB" class="object">
+                        <a href="https://github.com/samuelhsieh0829/3.5mm-audio-to-USB">
+                            <img src="assets/icons/ConvertRange20Filled.svg" width="36px" height="24px"></iframe>
+                        </a>
+                        <p>3.5mm Audio to USB</p>
+                    </div>
+                    <div id="esp32-chunithm-controller" class="object">
+                        <a href="https://github.com/samuelhsieh0829/esp32-chunithm-controller">
+                            <img src="assets/icons/PianoFilled.svg" width="36px" height="24px"></iframe>
+                        </a>
+                        <p>ESP32 Chunithm Controller</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" hidden="true">
                 <p>🥰Cuties🥰</p>
+                <!-- 唉，2025 9/26編輯的時候 還是這麼的美好 -->
                 <div class="objects-container">
                     <div id=":O" class="object">
                         <a href="https://www.instagram.com/zsisc32_yanxi">
@@ -150,6 +229,16 @@
     </div>
 
 <script>
+
+let secretCount = 0;
+document.getElementById('secret').addEventListener('click', () => {
+    secretCount++;
+    console.log(`OwO x${secretCount}?`);
+    if (secretCount === 3) {
+        document.getElementById(':O').parentElement.parentElement.style.display = 'block';
+    }
+});
+
 // 滾動動畫效果
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -177,11 +266,11 @@ const closeBtn = document.querySelector('.close');
 const descriptions = {
     'about_me': {
         title: '👀 關於我',
-        description: '我是謝恩（Samuel Hsieh），一位來自台灣的高中生。我對程式設計充滿熱情，特別喜歡探索新的技術和創建有趣的專案。我的興趣包括網頁開發、系統管理，以及開源軟體開發。\n\n我相信技術可以讓世界變得更美好，所以我致力於學習和分享知識，希望能夠創造出對他人有幫助的工具和應用程式。'
+        description: '我是謝恩（Samuel Hsieh），一位來自台灣的高中生。喜歡寫程式、架服務、組電路，一切跟電腦有關的東西我都喜歡!\n擔任成功電研37屆網管兼教學\n利用各種不同大大小小的專案成功特選上了輔大資工OwO'
     },
     'instagram': {
         title: '📷 Instagram',
-        description: '我的 Instagram 帳號：@e04._.40e\n\n在這裡我會分享我的日常生活、程式設計學習過程，以及一些有趣的科技相關內容。歡迎追蹤我的帳號。'
+        description: '我的 Instagram 帳號：@e04._.40e\n\n在這裡我會分享我的日常生活以及各種作品的成果。歡迎追蹤我的帳號:D'
     },
     'github': {
         title: '💻 GitHub',
@@ -197,31 +286,85 @@ const descriptions = {
     },
     'copypasta_api': {
         title: '📋 Copypasta API',
-        description: '文字分享平台\n網址：https://copy.itzowo.net\n\n一個簡單易用的文字分享平台，讓你可以快速分享代碼片段、文字內容，或是任何你想要分享的文字資訊。\n\n📝 快速文字分享\n🔗 生成分享連結\n⏱️ 設定過期時間\n🎨 語法高亮支援'
+        description: '文字分享平台\n網址：https://copy.itzowo.net\n\n一個簡單易用的文字分享平台，讓你可以快速分享代碼片段、文字內容，或是任何你想要分享的文字資訊。'
     },
     'val_tracker': {
         title: '🎮 Valorant Match Tracker',
-        description: '特戰英豪對戰追蹤器\n網址：https://valtrack.itzowo.net\n\n為 Valorant 玩家打造的比賽追蹤工具，讓你可以詳細分析你的遊戲表現，追蹤進步情況。\n\n📊 詳細比賽統計\n📈 表現趨勢分析\n🏆 排名追蹤\n🎯 個人數據洞察'
+        description: '特戰英豪對戰追蹤器\n網址：https://valtrack.itzowo.net\n\n為 Valorant 玩家打造的比賽追蹤工具，讓你可以詳細分析你的遊戲表現，追蹤進步情況。\n\n🏆 排名追蹤\n🎯 個人數據洞察'
+    },
+    'self_study_1': {
+        title: '📚 高一自主學習',
+        description: '113/06/05，主題為"自製實感射擊步槍-滑鼠鍵盤模擬"，透過使用 Arduino、MPU6050 加速度感測器、按鈕的組合，以及紙板外殼，打造出可以用來遊玩射擊遊戲的控制器，獲得了優選。',
+        imagePath: 'assets/img/arduino_gun.jpg'
+    },
+    'self_study_2': {
+        title: '📚 高二自主學習',
+        description: '113/12/26，主題為"成為弓箭手"，這次的作品是一個模擬弓箭的控制器，透過多個 Arduino、壓克力以及上次槍型控制器的元件，做出了具備無線連接的弓形控制器，獲得了優選及人氣獎。',
+        imagePath: 'assets/img/arduino_bow.jpg'
+    },
+    'ganzin': {
+        title: '👓 Ganzin X Taichi Design Competition',
+        description: '114/06/25，成功入選Ganzin X Taichi 設計競賽複賽，主題為利用特殊設計標示實現眼動開關，獲得了實作並在114/08/02前往清華大學發表的機會'
+    },
+    'ickii': {
+        title: '📄 ICKII 論文發表',
+        description: '成功入選ICKII 2025論文發表，主題為"A Motion-Based Interface to Enhance Enjoyment in FPS Games"，將高一自主學習所做，與父親合作成研究並發表，獲得最佳會議論文獎。',
+        imagePath: 'assets/img/ickii.jpg'
+    },
+    'university': {
+        title: '🎓 115特殊選材',
+        description: '成功通過115特殊選材:\n逢甲大學資工 備取21 (沒上qq)\n元智大學資工 備取29 (有備上)\n淡江大學資工 備取3 (有備上)\n 輔仁大學資工 備取3 (即將前往就讀)'
     },
     'portfolio': {
         title: '🖼️ Wallpaper Collection',
-        description: 'Steam 工作坊桌布作品\n\n我在 Steam 工作坊上分享的桌布作品集合。這些桌布都是我用心設計的，希望能為大家的桌面增添一些美感。'
+        description: 'Steam 工作坊桌布作品\n\n這是我的宵崎奏桌布😍歡迎大家使用'
     },
     'waybar': {
         title: '⚙️ Arch Waybar Config',
-        description: 'Arch Linux Waybar 配置\nGitHub：https://github.com/samuelhsieh0829/waybar\n\n我為 Arch Linux 系統客製化的 Waybar 配置檔案。Waybar 是一個高度可自訂的狀態列工具，這個配置提供了美觀且實用的系統資訊顯示。\n\n🐧 專為 Arch Linux 設計\n🎨 美觀的系統狀態列\n⚡ 即時系統監控\n🔧 完全可自訂配置'
+        description: 'Arch Linux Waybar 配置\nGitHub：https://github.com/samuelhsieh0829/waybar\n\n我為 Arch Linux 系統客製化的 Waybar 配置檔案。其中包含我自己設計的動態島風格，歡迎大家使用!\n\n🐧 專為 Arch Linux 設計\n🎨 美觀的系統狀態列\n⚡ 即時系統監控\n🔧 完全可自訂配置'
     },
     'music-bot': {
         title: '🎵 YouTube Music Bot',
-        description: 'Discord 音樂機器人\n邀請連結：https://discord.com/oauth2/authorize?client_id=1153932398501830710\n\n這是一個可以在 Discord 伺服器中播放 YouTube 音樂的機器人。只需邀請它到你的伺服器，然後使用簡單的指令即可播放你喜愛的音樂。\n\n🎶 支援播放 YouTube 音樂\n📜 簡單易用的指令\n🎧 高品質音樂體驗\n🤖 穩定可靠的性能'
+        description: 'Discord 音樂機器人\n邀請連結：https://discord.com/oauth2/authorize?client_id=1153932398501830710\n\n這是一個可以在 Discord 伺服器中播放 YouTube 音樂的機器人。只需邀請它到你的伺服器，然後使用簡單的指令即可播放你喜愛的音樂。\n\n🎶 支援播放 YouTube 音樂\n📜 簡單易用的指令\n🎧 高品質音樂體驗'
     },
     'samuelhsieh-bot': {
         title: '🤖 Samuelhsieh Bot',
         description: 'Discord AI聊天機器人\n'
     },
+    'samuelhsieh-agent': {
+        title: '🤖 Samuelhsieh Agent',
+        description: '基於 Gemini 的 AI 代理人，聊天機器人的升級版，具備更專業的人設設計檔案以及工具調用能力\n'
+    },
     'mc-query-bot': {
         title: '📡 Minecraft Query Bot',
         description: 'Minecraft 伺服器狀態查詢機器人\n'
+    },
+    'arduino-gun': {
+        title: '🔫 Arduino Gun',
+        description: '自製槍型控制裝置，透過加速度感測器和按鈕的組合，使用Arduino Pro Micro模擬HID，以及紙板外殼，打造出可以用來遊玩射擊遊戲的控制器。'
+    },
+    'arduino-bow': {
+        title: '🏹 Arduino Bow',
+        description: '自製弓型控制裝置，透過多個Arduino、壓克力、nRF24l01以及上次槍型控制器的元件，做出了具備無線連接的弓形控制器。'
+    },
+    'cheap-mai': {
+        title: '💸 Cheap Mai',
+        description: '自製舞萌控制器，使用Arduino Pro Micro模擬HID，結合紙板外殼以及按鈕，打造出可以用來玩舞萌的控制器。\nAbout Me點三下試試看?'
+    },
+    '3.5mm-audio-to-USB': {
+        title: '🔌 3.5mm Audio to USB',
+        description: '自製3.5mm音訊轉USB裝置，使用ESP32、ES8388，打造出可以將3.5mm音訊輸入轉換為USB輸出的裝置。(開發中)'
+    },
+    'esp32-chunithm-controller': {
+        title: '🎹 ESP32 Chunithm Controller',
+        description: '自製 Chunithm 控制器，使用 ESP32 和各種傳感器，打造出可以玩 Chunithm 的控制器。'
+    },
+    ":O": {
+        title:'🥰 OwOed 😵‍💫',
+        description:'OwO but in past tense🥺😣😭\n謝謝你認真看完我的網站!給你看cheap mai的示範影片\nhttps://github.com/samuelhsieh0829/my_page 是這個網頁的repo，或許你能在assets中找到更多...曾經的回憶...',
+        link: "https://www.instagram.com/p/DO2zNLmkcXe",
+        linkText: "點我👇",
+        imagePath: 'assets/img/qq.jpeg'
     }
 };
 
@@ -240,7 +383,23 @@ document.querySelectorAll('.object').forEach((object) => {
         
         if (info) {
             modalTitle.textContent = info.title;
-            modalDescription.textContent = info.description;
+            modalDescription.innerText = info.description;
+            if (info.imagePath) {
+                const img = document.createElement('img');
+                img.src = info.imagePath;
+                img.style.maxWidth = '100%';
+                img.style.marginTop = '10px';
+                modalDescription.appendChild(img);
+            }
+            if (info.link && info.linkText) {
+                const link = document.createElement('a');
+                link.href = info.link;
+                link.textContent = info.linkText || '相關連結';
+                link.target = '_blank';
+                link.style.display = 'block';
+                link.style.marginTop = '10px';
+                modalDescription.appendChild(link);
+            }
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden'; // 防止背景滾動
         }
