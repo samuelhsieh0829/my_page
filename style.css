@@ -213,6 +213,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.3);
     position: relative;
     animation: modalFadeIn 0.3s ease-out;
+    font-family: "Roboto", sans-serif;
 }
 
 .modal-content h3 {
@@ -250,12 +251,30 @@ body {
 
 /* 讓 object 可點擊 */
 .object {
-    cursor: pointer;
+    cursor: help; /* 其他區域顯示幫助游標 */
     user-select: none;
+}
+
+.object a {
+    cursor: pointer; /* 連結區域顯示手型游標 */
+}
+
+.object a img {
+    cursor: pointer; /* 圖片也顯示手型游標 */
 }
 
 .object:active {
     transform: translateY(-2px) scale(0.98);
+}
+
+/* 為連結區域添加視覺效果 */
+.object a:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.object a img {
+    transition: transform 0.3s ease;
 }
 
 @media (max-width: 768px) {

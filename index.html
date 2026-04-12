@@ -83,7 +83,7 @@
             </div>
             
             <div class="section">
-                <p>📁My works📁</p>
+                <p>📁My "Art" works📁</p>
                 <div class="objects-container">
                     <div id="portfolio" class="object">
                         <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3486969195">
@@ -99,19 +99,55 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="section">
+                <p>🤖My Discord bots🤖</p>
+                <div class="objects-container">
+                    <div id="music-bot" class="object">
+                        <a href="https://github.com/samuelhsieh0829/Youtube-Discord-music-bot">
+                            <img src="assets/icons/MusicNote2Play20Filled.svg" width="36px" height="36px"></iframe>
+                        </a>
+                        <p>YouTube Music Bot</p>
+                    </div>
+                    <div id="samuelhsieh-bot" class="object">
+                        <a href="https://github.com/samuelhsieh0829/samuelhsieh">
+                            <img src="assets/icons/Chat32Filled.svg" width="36px" height="36px"></iframe>
+                        </a>
+                        <p>Samuelhsieh Bot</p>
+                    </div>
+                    <div id="mc-query-bot" class="object">
+                        <a href="https://github.com/samuelhsieh0829/minecraft-query">
+                            <img src="assets/icons/BroadcastTower.svg" width="36px" height="36px"></iframe>
+                        </a>
+                        <p>Minecraft query Bot</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <p>🥰Cuties🥰</p>
+                <div class="objects-container">
+                    <div id=":O" class="object">
+                        <a href="https://www.instagram.com/zsisc32_yanxi">
+                            <img src="assets/img/IMG_7437.jpg" width="180px" height="240px"></iframe>
+                        </a>
+                        <p>OwO</p>
+                    </div>
+                </div>
+            </div>
         </div>
         
     </div>
     </div>
 
-<!-- 彈出框 -->
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h3 id="modal-title"></h3>
-        <p id="modal-description"></p>
+    <!-- 彈出框 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+        </div>
     </div>
-</div>
 
 <script>
 // 滾動動畫效果
@@ -145,7 +181,7 @@ const descriptions = {
     },
     'instagram': {
         title: '📷 Instagram',
-        description: '我的 Instagram 帳號：@e04._.40e\n\n在這裡我會分享我的日常生活、程式設計學習過程，以及一些有趣的科技相關內容。歡迎追蹤我的帳號，一起交流學習！\n\n✨ 追蹤我看更多內容\n✨ 與我互動交流技術話題\n✨ 了解我的學習旅程'
+        description: '我的 Instagram 帳號：@e04._.40e\n\n在這裡我會分享我的日常生活、程式設計學習過程，以及一些有趣的科技相關內容。歡迎追蹤我的帳號。'
     },
     'github': {
         title: '💻 GitHub',
@@ -169,17 +205,35 @@ const descriptions = {
     },
     'portfolio': {
         title: '🖼️ Wallpaper Collection',
-        description: 'Steam 工作坊桌布作品\n\n我在 Steam 工作坊上分享的桌布作品集合。這些桌布都是我用心設計的，希望能為大家的桌面增添一些美感。\n\n🎨 原創設計桌布\n✨ 高品質圖像\n🌈 多種風格選擇\n📥 免費下載使用'
+        description: 'Steam 工作坊桌布作品\n\n我在 Steam 工作坊上分享的桌布作品集合。這些桌布都是我用心設計的，希望能為大家的桌面增添一些美感。'
     },
     'waybar': {
         title: '⚙️ Arch Waybar Config',
         description: 'Arch Linux Waybar 配置\nGitHub：https://github.com/samuelhsieh0829/waybar\n\n我為 Arch Linux 系統客製化的 Waybar 配置檔案。Waybar 是一個高度可自訂的狀態列工具，這個配置提供了美觀且實用的系統資訊顯示。\n\n🐧 專為 Arch Linux 設計\n🎨 美觀的系統狀態列\n⚡ 即時系統監控\n🔧 完全可自訂配置'
+    },
+    'music-bot': {
+        title: '🎵 YouTube Music Bot',
+        description: 'Discord 音樂機器人\n邀請連結：https://discord.com/oauth2/authorize?client_id=1153932398501830710\n\n這是一個可以在 Discord 伺服器中播放 YouTube 音樂的機器人。只需邀請它到你的伺服器，然後使用簡單的指令即可播放你喜愛的音樂。\n\n🎶 支援播放 YouTube 音樂\n📜 簡單易用的指令\n🎧 高品質音樂體驗\n🤖 穩定可靠的性能'
+    },
+    'samuelhsieh-bot': {
+        title: '🤖 Samuelhsieh Bot',
+        description: 'Discord AI聊天機器人\n'
+    },
+    'mc-query-bot': {
+        title: '📡 Minecraft Query Bot',
+        description: 'Minecraft 伺服器狀態查詢機器人\n'
     }
 };
 
 // 為每個 object 添加點擊事件
 document.querySelectorAll('.object').forEach((object) => {
     object.addEventListener('click', (e) => {
+        // 如果點擊的是連結或圖片，讓連結正常工作
+        if (e.target.tagName === 'A' || e.target.tagName === 'IMG' || e.target.closest('a')) {
+            return; // 不阻止默認行為，讓連結正常跳轉
+        }
+        
+        // 點擊其他區域時顯示說明彈出框
         e.preventDefault();
         const id = object.id;
         const info = descriptions[id];
