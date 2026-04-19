@@ -18,13 +18,13 @@ body {
 }
 
 .title h1 {
-    font-size: clamp(2rem, 8vw, 5rem);
+    font-size: clamp(3rem, 8vw, 5rem);
     margin: 0;
     line-height: 1.1;
 }
 
 .title h2 {
-    font-size: clamp(0.9rem, 3.5vw, 3rem);
+    font-size: clamp(1.3rem, 3.5vw, 3rem);
     margin: 0;
     line-height: 1.2;
 }
@@ -286,6 +286,14 @@ body {
         top: 5%;
         width: 90%;
         padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .typewriter,
+    .typewriter-delay {
+        margin: 0 auto;
     }
     
     .title h1 {
@@ -306,13 +314,17 @@ body {
         transform: none;
         top: 0;
         left: 0;
-        padding-top: 18vh;
+        padding-top: 15vh;
     }
     .child {
         width: 100%;
         padding: 0 15px;
         top: 0;
         left: 0;
+    }
+
+    .child .section:first-child {
+        margin-top: 32px;
     }
     
     .object {
@@ -349,6 +361,6 @@ body {
     }
     
     .container {
-        padding-top: 15vh;
+        padding-top: 12vh;
     }
 }
