@@ -28,6 +28,14 @@
                             I am Samuel Hsieh, developer from Taiwan.
                         </p>
                     </div>
+                    <div id="navigation" class="object">
+                        <img src="assets/img/20260307_230638.jpg" width="72px" height="72px" style="border-radius: 50%;"></iframe>
+                        <p>
+                            這是我的個人網站 每一個白色方框都可以點進去查看ㄛ<br>
+                            ◀️左邊的是我的自我介紹 <br>
+                            🔽以下則是我做過的各種作品 <br>
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -273,7 +281,12 @@ const closeBtn = document.querySelector('.close');
 const descriptions = {
     'about_me': {
         title: '👀 關於我',
-        description: '我是謝恩（Samuel Hsieh），一位來自台灣的大學生。喜歡寫程式、架服務、組電路、打電動，一切跟電腦有關的東西我都喜歡!個性極度內向，MBTI在INTP與INFP-T之間反覆橫跳，I則是99%的那種I，但要是主動來找我聊天我會很開心ㄛ(^● v ●^) OwO是我在很多地方的暱稱，因為長得很可愛OwO\n\n#重度表情符號依賴者 #聊天不帶個XD、OwO或ww會死嗎 #腦袋語言組織發育不全 #講幹? #NPC吧 #Youtube、IG短片成癮 #身在台灣，時區在英國 #awmc #貌似有點女裝闢?\n#喜歡被在意 #喜歡流量 #喜歡3C #喜歡香菜 #喜歡香菜愛吃香菜\n#討厭被討厭 #討厭國文 #討厭數學 #討厭喜歡香菜愛吃香菜的人(沒\n\n曾擔任成功高中電子計算機研習社37屆網管兼教學\n利用各種不同大大小小的專案成功特選上了輔大資工OwO\n\n🤓我會:Python、Docker、Nginx、HTML、C++、C、焊接、組電腦\n⚡專精於:Discord bot、Flask、用各類MCU拼出東西\n🎮喜歡玩:maimaiDX(舞萌癡一枚6️⃣7️⃣)、Valorant(哀瓦學弟🥀)、世界計畫、Osu!、Chunithm、原神、Minecraft、\nCodex🤓、Visual Studio Code😱、Arduino IDE🥶\n🩷宵崎奏我寶🩷\n😍曉山瑞希好可愛😍\n🗣️鳳笑夢 Wonderhoi!!!🗣️\n\n\n uSe aRcH bTw(但硬碟不夠用把他清掉了😭)'
+        description: '我是謝恩（Samuel Hsieh），一位來自台灣的大學生。喜歡寫程式、架服務、組電路、打電動，一切跟電腦有關的東西我都喜歡!\n個性極度內向，MBTI在INTP與INFP-T之間反覆橫跳，I則是99%的那種I，但要是主動來找我聊天我會很開心ㄛ(^● v ●^) OwO是我在很多地方的暱稱，因為長得很可愛OwO\n\n#重度表情符號依賴者 #聊天不帶個XD、OwO或ww會死嗎 #腦袋語言組織發育不全 #講幹? #NPC吧 #Youtube、IG短片成癮 #身在台灣，時區在英國 #awmc #貌似有點女裝癖?\n#喜歡被在意 #喜歡流量 #喜歡3C #喜歡香菜 #喜歡香菜愛吃香菜\n#討厭被討厭 #討厭國文 #討厭數學 #討厭喜歡香菜愛吃香菜的人(沒\n\n曾擔任成功高中電子計算機研習社37屆網管兼教學\n利用各種不同大大小小的專案成功特選上了輔大資工OwO\n\n🤓我會:Python、Docker、Nginx、HTML、C++、C、焊接、組電腦\n⚡專精於:Discord bot、Flask、用各類MCU拼出東西\n🎮喜歡玩:maimaiDX(舞萌癡一枚6️⃣7️⃣)、Valorant(哀瓦學弟🥀)、世界計畫、Osu!、Chunithm、原神、Minecraft、\nCodex🤓、Visual Studio Code😱、Arduino IDE🥶\n🎧喜歡聽:25時、ナイトコードで。、各種maimai曲、一些世界計畫的書下曲、Vocaloid\n\n🩷宵崎奏我寶🩷\n😍曉山瑞希好可愛😍\n🗣️鳳笑夢 Wonderhoi!!!🗣️\n\n\nI uSe aRcH bTw(但硬碟不夠用把他清掉了😭)\n\n話說雖然我的頭像是寶可夢，但其實我沒有玩，單純小學拍的覺得很好看就拿來用了:D'
+    },
+    'navigation': {
+        title: '🧭 導覽',
+        description: '這是我的個人網站，除了白色框可以點選，上面的圖案點擊則可以直接前往對應的網站。\n既然你都認真點開導覽來看了，送你一個宵崎奏67😈，話說這網站藏了一個彩蛋，認真把所有看完說不定就能發現ㄛ👀',
+        imagePath: 'assets/img/1544791480047108246.webp'
     },
     'instagram': {
         title: '📷 Instagram',
@@ -369,7 +382,9 @@ const descriptions = {
     },
     'esp32-chunithm-controller': {
         title: '🎹 ESP32 Chunithm Controller',
-        description: '自製 Chunithm 控制器，使用 ESP32 和各種傳感器，打造出可以玩 Chunithm 的控制器。'
+        description: '自製 Chunithm 控制器，使用 ESP32 和各種傳感器，打造出可以玩 Chunithm 的控制器。',
+        link: "https://www.instagram.com/reel/DW_hd89kaQa/",
+        linkText: "示範影片👇"
     },
     ":O": {
         title:'🥰 OwOed 😵‍💫',
