@@ -23,9 +23,9 @@
                 <div class="objects-container">
                     <div id="about_me" class="object">
                         <img src="https://avatars.githubusercontent.com/u/66865408?v=4" width="72px" height="72px" style="border-radius: 50%;"></iframe>
-                        <p>我是謝恩，一位來自台灣，熱愛寫程式的高中生
+                        <p>我是謝恩，一位來自台灣，熱愛寫程式的大學生
                             <br>
-                            I am Samuel Hsieh, a high school developer from Taiwan.
+                            I am Samuel Hsieh, developer from Taiwan.
                         </p>
                     </div>
                 </div>
@@ -78,6 +78,12 @@
                             <img src="assets/icons/MonitorOutlined.svg" width="36px" height="36px"></iframe>
                         </a>
                         <p>Valtracker</p>
+                    </div>
+                    <div id="mrt" class="object">
+                        <a href="https://github.com/lucasw0908/izcc2024MRT">
+                            <img src="assets/icons/IosSubway.svg" width="36px" height="36px"></iframe>
+                        </a>
+                        <p>IZCC MRT</p>
                     </div>
                 </div>
             </div>
@@ -207,7 +213,8 @@
                 <!-- 唉，2025 9/26編輯的時候 還是這麼的美好 -->
                 <div class="objects-container">
                     <div id=":O" class="object">
-                        <a href="https://www.instagram.com/zsisc32_yanxi">
+                        <!-- <a href="https://www.instagram.com/zsisc32_yanxi"> -->
+                        <a href="https://www.instagram.com/yanxi_9270">   
                             <img src="assets/img/IMG_7437.jpg" width="180px" height="240px"></iframe>
                         </a>
                         <p>OwO</p>
@@ -266,7 +273,7 @@ const closeBtn = document.querySelector('.close');
 const descriptions = {
     'about_me': {
         title: '👀 關於我',
-        description: '我是謝恩（Samuel Hsieh），一位來自台灣的高中生。喜歡寫程式、架服務、組電路，一切跟電腦有關的東西我都喜歡!\n擔任成功電研37屆網管兼教學\n利用各種不同大大小小的專案成功特選上了輔大資工OwO'
+        description: '我是謝恩（Samuel Hsieh），一位來自台灣的大學生。喜歡寫程式、架服務、組電路、打電動，一切跟電腦有關的東西我都喜歡!個性極度內向，MBTI在INTP與INFP-T之間反覆橫跳，I則是99%的那種I，但要是主動來找我聊天我會很開心ㄛ(^● v ●^) OwO是我在很多地方的暱稱，因為長得很可愛OwO\n\n#重度表情符號依賴者 #聊天不帶個XD、OwO或ww會死嗎 #腦袋語言組織發育不全 #講幹? #NPC吧 #Youtube、IG短片成癮 #身在台灣，時區在英國 #awmc #貌似有點女裝闢?\n#喜歡被在意 #喜歡流量 #喜歡3C #喜歡香菜 #喜歡香菜愛吃香菜\n#討厭被討厭 #討厭國文 #討厭數學 #討厭喜歡香菜愛吃香菜的人(沒\n\n曾擔任成功高中電子計算機研習社37屆網管兼教學\n利用各種不同大大小小的專案成功特選上了輔大資工OwO\n\n🤓我會:Python、Docker、Nginx、HTML、C++、C、焊接、組電腦\n⚡專精於:Discord bot、Flask、用各類MCU拼出東西\n🎮喜歡玩:maimaiDX(舞萌癡一枚6️⃣7️⃣)、Valorant(哀瓦學弟🥀)、世界計畫、Osu!、Chunithm、原神、Minecraft、\nCodex🤓、Visual Studio Code😱、Arduino IDE🥶\n🩷宵崎奏我寶🩷\n😍曉山瑞希好可愛😍\n🗣️鳳笑夢 Wonderhoi!!!🗣️\n\n\n uSe aRcH bTw(但硬碟不夠用把他清掉了😭)'
     },
     'instagram': {
         title: '📷 Instagram',
@@ -292,6 +299,10 @@ const descriptions = {
         title: '🎮 Valorant Match Tracker',
         description: '特戰英豪對戰追蹤器\n網址：https://valtrack.itzowo.net\n\n為 Valorant 玩家打造的比賽追蹤工具，讓你可以詳細分析你的遊戲表現，追蹤進步情況。\n\n🏆 排名追蹤\n🎯 個人數據洞察'
     },
+    'mrt': {
+        title: '🗺️ 捷運大富翁',
+        description: 'IZCC2024~寒暑訓捷運大富翁\n網址：https://mrt.ckcsc.net\n\n與IZCC四校成員共同開發，用於寒、暑訓團康活動。\nhttps://github.com/lucasw0908/izcc2024MRT\nhttps://github.com/yingOuOb/izcc2025MRT'
+    },
     'self_study_1': {
         title: '📚 高一自主學習',
         description: '113/06/05，主題為"自製實感射擊步槍-滑鼠鍵盤模擬"，透過使用 Arduino、MPU6050 加速度感測器、按鈕的組合，以及紙板外殼，打造出可以用來遊玩射擊遊戲的控制器，獲得了優選。',
@@ -304,7 +315,8 @@ const descriptions = {
     },
     'ganzin': {
         title: '👓 Ganzin X Taichi Design Competition',
-        description: '114/06/25，成功入選Ganzin X Taichi 設計競賽複賽，主題為利用特殊設計標示實現眼動開關，獲得了實作並在114/08/02前往清華大學發表的機會'
+        description: '114/06/25，成功入選Ganzin X Taichi 設計競賽複賽，主題為利用特殊設計標示實現眼動開關，獲得了實作並在114/08/02前往清華大學發表的機會',
+        imagePath: 'assets/img/ganzin.jpg'
     },
     'ickii': {
         title: '📄 ICKII 論文發表',
@@ -313,7 +325,7 @@ const descriptions = {
     },
     'university': {
         title: '🎓 115特殊選材',
-        description: '成功通過115特殊選材:\n逢甲大學資工 備取21 (沒上qq)\n元智大學資工 備取29 (有備上)\n淡江大學資工 備取3 (有備上)\n 輔仁大學資工 備取3 (即將前往就讀)'
+        description: '成功通過115特殊選材:\n🥀逢甲大學資工 備取21 (沒上qq)\n🙌元智大學資工 備取29 (有備上)\n🙌淡江大學資工 備取3 (有備上)\n 🩷輔仁大學資工 備取3 (正在就讀)'
     },
     'portfolio': {
         title: '🖼️ Wallpaper Collection',
@@ -325,7 +337,7 @@ const descriptions = {
     },
     'music-bot': {
         title: '🎵 YouTube Music Bot',
-        description: 'Discord 音樂機器人\n邀請連結：https://discord.com/oauth2/authorize?client_id=1153932398501830710\n\n這是一個可以在 Discord 伺服器中播放 YouTube 音樂的機器人。只需邀請它到你的伺服器，然後使用簡單的指令即可播放你喜愛的音樂。\n\n🎶 支援播放 YouTube 音樂\n📜 簡單易用的指令\n🎧 高品質音樂體驗'
+        description: 'Discord 音樂機器人\n\n這是一個可以在 Discord 伺服器中播放 YouTube 音樂的機器人。只需邀請它到你的伺服器，然後使用簡單的指令即可播放你喜愛的音樂。\n\n🎶 支援播放 YouTube 音樂\n📜 簡單易用的指令\n🎧 高品質音樂體驗'
     },
     'samuelhsieh-bot': {
         title: '🤖 Samuelhsieh Bot',
